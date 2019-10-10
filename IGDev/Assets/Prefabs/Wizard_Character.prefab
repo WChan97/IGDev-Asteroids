@@ -254,7 +254,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580179403c460564fbe38cf1f1de8f11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 3
+  health: 1
   isSlime: 0
   SlimeSmallPrefab: {fileID: 0}
   SlimeLargePrefab: {fileID: 0}

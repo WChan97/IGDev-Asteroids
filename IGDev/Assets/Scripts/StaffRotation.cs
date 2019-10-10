@@ -5,6 +5,8 @@ using UnityEngine;
 public class StaffRotation : MonoBehaviour
 {
     private SpriteRenderer sprite;
+    bool faceLeft = false;
+    bool faceRight = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,11 +44,15 @@ public class StaffRotation : MonoBehaviour
         if ((mousePos.x - transform.position.x) < 0.0f)
         {
             sprite.flipX = true;
+            faceLeft = true;
+            faceRight = false;
             //transform.position = new Vector3(transform.position.x - 0.35f, transform.position.y, transform.position.z);
         }
         if ((mousePos.x - transform.position.x) > 0.0f)
         {
             sprite.flipX = false;
+            faceLeft = false;
+            faceRight = true;
         }
     }
 }

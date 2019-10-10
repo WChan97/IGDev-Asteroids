@@ -1,25 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class SlimeMovement : MonoBehaviour
 {
-    Scene currentScene;
     public Transform player;
-    float speed = 5.0f;
+    float speed = 3.0f;
     float rotationSpeed = 180f;
     bool bounceRecently = false;
     float bounceDelay;
     float flingDelay;
-    float wizardBoundary = -2f;
+
     // Start is called before the first frame update
     void Start()
     {
-        currentScene = SceneManager.GetActiveScene();
         if (gameObject.tag == "LargeSlime")
         {
-            speed = 3.0f;
+            speed = 2.0f;
         }
         flingDelay = 2.0f;
     }
@@ -27,33 +24,6 @@ public class SlimeMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 pos = transform.position;
-
-        //Define Boundaries
-        float screenRatio = (float)Screen.width / (float)Screen.height;
-        float widthCam = Camera.main.orthographicSize * screenRatio;
-
-
-        //Keep wizard in boundary. Vertical First, then Horizontal.
-        if (pos.y + wizardBoundary > Camera.main.orthographicSize)
-        {
-            pos.y = Camera.main.orthographicSize - wizardBoundary;
-        }
-        if (pos.y - wizardBoundary < -Camera.main.orthographicSize)
-        {
-            pos.y = -Camera.main.orthographicSize + wizardBoundary;
-        }
-        if (pos.x + wizardBoundary > widthCam)
-        {
-            pos.x = widthCam - wizardBoundary;
-        }
-        if (pos.x - wizardBoundary < -widthCam)
-        {
-            pos.x = -widthCam + wizardBoundary;
-        }
-        transform.position = pos;
-
-
         if (player == null)
         {
             GameObject wizard = GameObject.FindWithTag("Player");
@@ -85,10 +55,10 @@ public class SlimeMovement : MonoBehaviour
         }
 
         //And move towards player
-        Vector3 pos2 = transform.position;
+        Vector3 pos = transform.position;
         Vector3 velocity = new Vector3(0, speed * Time.deltaTime, 0);
-        pos2 += transform.rotation * velocity;
-        transform.position = pos2;
+        pos += transform.rotation * velocity;
+        transform.position = pos;
 
         
 
@@ -110,30 +80,27 @@ public class SlimeMovement : MonoBehaviour
 
     void Fling()
     {
-        if (currentScene.name == "SpecialScene")
-        {
-            bounceRecently = true;
-            bounceDelay = 0.2f;
-            if (speed >= 2.0f && speed < 10.0f)
-            { //All Slimes
-                speed = 0.0f;
-                flingDelay = 1.0f;
+        bounceRecently = true;
+        bounceDelay = 0.2f;
+        if (speed >= 2.0f && speed < 10.0f)
+        { //All Slimes
+            speed = 0.0f;
+            flingDelay = 1.0f;
+        }
+        else if (speed == 0.0f)
+        {//All fling ready slimes
+            speed = 20.0f;
+            flingDelay = 0.1f;
+            
+        }
+        else
+        { //Reset to normal speed.
+            speed = 3.0f;
+            if (gameObject.tag == "LargeSlime")
+            {
+                speed = 2.0f;
             }
-            else if (speed == 0.0f)
-            {//All fling ready slimes
-                speed = 20.0f;
-                flingDelay = 0.15f;
-
-            }
-            else
-            { //Reset to normal speed.
-                speed = 3.0f;
-                if (gameObject.tag == "LargeSlime")
-                {
-                    speed = 2.0f;
-                }
-                flingDelay = 5.0f;
-            }
+            flingDelay = 5.0f;
         }
     }
 
@@ -145,16 +112,13 @@ public class SlimeMovement : MonoBehaviour
         }
     }
 
-    
+    /*
     void OnTriggerStay2D(Collider2D collide)
     {
-        if (currentScene.name == "NormalScene")
+        if (gameObject.layer == collide.gameObject.layer)
         {
-            if (gameObject.layer == collide.gameObject.layer)
-            {
-                Bounce();
-            }
+            Bounce();
         }
     }
-    
+    */
 }
