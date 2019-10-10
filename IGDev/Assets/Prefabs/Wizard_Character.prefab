@@ -90,7 +90,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5467743210514698343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eac2f16061bde2d42886413f630aabe4, type: 3}
+  m_Script: {fileID: 11500000, guid: 31779e165a3b27e4c9b9cc132caefa69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &5467743210514698339
@@ -102,12 +102,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 5467743210514698343}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc898b6353da4dd40b86fa28cb92fc20, type: 3}
+  m_Script: {fileID: 11500000, guid: 45be3f418a6bb4e41bff9a8110421699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   magicMissilePrefab: {fileID: 8556441552284859582, guid: c9c49cbf5eb017e41ae23ce7a58e3d96,
     type: 3}
-  castDelay: 0.25
+  castDelay: 0.5
   cast: {fileID: 8300000, guid: e378f2deb0d6bc94c989e579df53e9b9, type: 3}
 --- !u!1 &5467743210916660356
 GameObject:
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5467743210916660356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47d8f10db9b12734b88e271bc041949f, type: 3}
+  m_Script: {fileID: 11500000, guid: ec86d8eed6e43bd4496a6055ec8c3e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!70 &5467743210916660352
@@ -251,11 +251,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 5467743210916660356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580179403c460564fbe38cf1f1de8f11, type: 3}
+  m_Script: {fileID: 11500000, guid: de4fc4c7f7b8c594cbe2931772066004, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 1
+  health: 3
   isSlime: 0
-  SlimeSmallPrefab: {fileID: 0}
-  SlimeLargePrefab: {fileID: 0}
+  SlimeSmallPrefab: {fileID: 6661761855391079566, guid: d86c96adcd1b6484c90c8ffb669eee23,
+    type: 3}
+  SlimeLargePrefab: {fileID: 4178183897823720585, guid: d2043375b1e098c4f8fc13906751a941,
+    type: 3}
   hit: {fileID: 8300000, guid: 3f5e58dddbd902140b5ebb80a3ead7d8, type: 3}

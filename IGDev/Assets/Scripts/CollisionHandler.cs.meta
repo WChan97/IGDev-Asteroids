@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 580179403c460564fbe38cf1f1de8f11
+guid: de4fc4c7f7b8c594cbe2931772066004
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - SlimeSmallPrefab: {fileID: 6661761855391079566, guid: d86c96adcd1b6484c90c8ffb669eee23,
+      type: 3}
+  - SlimeLargePrefab: {fileID: 4178183897823720585, guid: d2043375b1e098c4f8fc13906751a941,
+      type: 3}
+  - hit: {fileID: 8300000, guid: 3f5e58dddbd902140b5ebb80a3ead7d8, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
