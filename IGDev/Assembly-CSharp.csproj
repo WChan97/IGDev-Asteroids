@@ -53,8 +53,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraDrone.cs" />
+     <Compile Include="Assets\Scripts\CollisionHandler.cs" />
+     <Compile Include="Assets\Scripts\DestroyMissile.cs" />
      <Compile Include="Assets\Scripts\LevelHandler.cs" />
+     <Compile Include="Assets\Scripts\MagicMissile.cs" />
+     <Compile Include="Assets\Scripts\MissileTravel.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerRespawn.cs" />
+     <Compile Include="Assets\Scripts\SlimeMovement.cs" />
      <Compile Include="Assets\Scripts\StaffRotation.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/Walter/Documents/GitHub/IGDev-Project/IGDev/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>

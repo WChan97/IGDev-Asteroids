@@ -5,7 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private SpriteRenderer sprite;
-    float speed = 5.0f;
+    float speed = 4.0f;
+    float wizardBoundary = 0.3f;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,9 +27,33 @@ public class PlayerMovement : MonoBehaviour
         pos.y += Input.GetAxis("Vertical") * speed * Time.deltaTime;
         pos.x += Input.GetAxis("Horizontal") * speed * Time.deltaTime;
 
+        //Define Boundaries
+        float screenRatio = (float)Screen.width / (float)Screen.height;
+        float widthCam = Camera.main.orthographicSize * screenRatio;
 
-        //Update Position
+
+        //Keep wizard in boundary. Vertical First, then Horizontal.
+        if (pos.y + wizardBoundary > Camera.main.orthographicSize)
+        {
+            pos.y = Camera.main.orthographicSize - wizardBoundary;
+        }
+        if (pos.y - wizardBoundary < -Camera.main.orthographicSize)
+        {
+            pos.y = -Camera.main.orthographicSize + wizardBoundary;
+        }
+        if (pos.x + wizardBoundary > widthCam)
+        {
+            pos.x = widthCam - wizardBoundary;
+        }
+        if (pos.x - wizardBoundary < -widthCam)
+        {
+            pos.x = -widthCam + wizardBoundary;
+        }
+
+
         transform.position = pos;
+
+        //Check and flip sprite if mouse is on either side of wizard.
         FlipSprite();
     }
 

@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SmallSlime
+  - LargeSlime
   layers:
   - Default
   - TransparentFX
@@ -13,6 +15,10 @@ TagManager:
   - UI
   - 
   - 
+  - Staff
+  - Player
+  - Slime
+  - Invulnerable
   - 
   - 
   - 
@@ -32,12 +38,20 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Background
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2663641329
+    locked: 0
+  - name: Slime
+    uniqueID: 2848237851
+    locked: 0
+  - name: Player
+    uniqueID: 2381662999
+    locked: 0
+  - name: Staff
+    uniqueID: 2477037485
     locked: 0

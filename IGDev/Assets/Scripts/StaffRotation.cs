@@ -30,8 +30,8 @@ public class StaffRotation : MonoBehaviour
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 direction = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
 
-        Debug.Log(mousePos.x - transform.position.x + "mouseX");
-        Debug.Log(mousePos.y - transform.position.y + "mouseY");
+        //Debug.Log(mousePos.x - transform.position.x + "mouseX");
+        //Debug.Log(mousePos.y - transform.position.y + "mouseY");
 
         transform.up = direction;
     }
