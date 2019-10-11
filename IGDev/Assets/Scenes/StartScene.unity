@@ -371,7 +371,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &748579668
 GameObject:
@@ -644,8 +644,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220, y: -135}
-  m_SizeDelta: {x: 267, y: 216}
+  m_AnchoredPosition: {x: 223.3, y: -135}
+  m_SizeDelta: {x: 281.43, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843511614
 MonoBehaviour:
@@ -695,9 +695,9 @@ MonoBehaviour:
 
     Triple Magic Missile - Mouse2
 
-    Teleport - Q (Unlimited)
+    Teleport - Q/Space (Unlimited)
 
-    Haste - E (On Cooldown)'
+    Haste - E/LeftShift (On Cooldown)'
 --- !u!222 &843511615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1025,6 +1025,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1775859590}
+  - {fileID: 1610565180}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1203,7 +1204,7 @@ RectTransform:
   - {fileID: 843511613}
   - {fileID: 2102425096}
   - {fileID: 869625611}
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1403069675}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1275,7 +1276,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775859589
 GameObject:
@@ -1401,7 +1402,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1887444041 stripped
 RectTransform:

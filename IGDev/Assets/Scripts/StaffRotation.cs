@@ -24,6 +24,7 @@ public class StaffRotation : MonoBehaviour
 
     void ChangeRotation()
     {
+        //Get the mouse input, and change the direction to face that position.
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         Vector2 direction = new Vector2(mousePos.x - transform.position.x, mousePos.y - transform.position.y);
@@ -36,6 +37,7 @@ public class StaffRotation : MonoBehaviour
 
     void FlipSprite()
     {
+        //Flip Staff depending on what side the mouse is on.
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
 

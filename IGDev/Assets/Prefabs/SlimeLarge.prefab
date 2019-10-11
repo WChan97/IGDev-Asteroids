@@ -158,6 +158,7 @@ MonoBehaviour:
     type: 3}
   SlimeLargePrefab: {fileID: 4178183897823720585}
   hit: {fileID: 8300000, guid: 3f5e58dddbd902140b5ebb80a3ead7d8, type: 3}
+  splat: {fileID: 8300000, guid: b89fc7161c9ccf54b9e51550765f8fda, type: 3}
 --- !u!114 &4178183897823720586
 MonoBehaviour:
   m_ObjectHideFlags: 0

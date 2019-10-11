@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        currentScene = SceneManager.GetActiveScene();
+        currentScene = SceneManager.GetActiveScene(); //Used for scene differences
     }
 
     void Awake()
@@ -58,7 +58,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (currentScene.name == "SpecialScene")
         {
-            if (Input.GetKeyDown("q") == true)
+            //Special Scene's Iteration. This script handles movement and speed. So the two additions, teleport and increased movement speed are present.
+            if (Input.GetKeyDown("q") == true || Input.GetKeyDown("space") == true)
             {
                 AudioSource.PlayClipAtPoint(tele, Camera.main.transform.position);
                 Vector3 mousePos = Input.mousePosition;
@@ -66,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
                 pos = new Vector3(mousePos.x, mousePos.y, 0);
             }
 
-            if (Input.GetKeyDown("e") == true && hasteCooldown <= 0.0f)
+            if (Input.GetKeyDown("e") == true || Input.GetKeyDown("left shift") == true && hasteCooldown <= 0.0f)
             {
                 AudioSource.PlayClipAtPoint(haste, Camera.main.transform.position);
                 speed = 9.0f;
@@ -78,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        //Update positions
         transform.position = pos;
 
         //Check and flip sprite if mouse is on either side of wizard.
@@ -86,6 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FlipSprite()
     {
+        //If the mouse is on either side of the wizards sprite, flip so it's looking at the mouse.
         Vector3 mousePos = Input.mousePosition;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
         if ((mousePos.x - transform.position.x) < 0.0f)

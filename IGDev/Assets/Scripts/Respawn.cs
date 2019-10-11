@@ -19,6 +19,7 @@ public class Respawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Since the scenes start empty, spawn a player in.
         SpawnPlayer();
     }
 
@@ -27,7 +28,7 @@ public class Respawn : MonoBehaviour
     {
         if (playerInstance == null && numLives > 0)
         {
-            respawnTimer -= Time.deltaTime;
+            respawnTimer = respawnTimer - Time.deltaTime;
 
             if (respawnTimer <= 0)
             {
@@ -35,27 +36,28 @@ public class Respawn : MonoBehaviour
             }
         }
 
-        nextEnemy -= Time.deltaTime;
+        nextEnemy = nextEnemy - Time.deltaTime;
 
-        if (nextEnemy <= 0)
+        if (nextEnemy <= 0.0f)
         {
             nextEnemy = rateOfSpawn;
-            rateOfSpawn *= 0.9f;
-            if (rateOfSpawn < 2)
+            rateOfSpawn = rateOfSpawn * 0.9f; // Increase the rate of spawn by getting 90% of its current value every spawn, until it reaches every 2 seconds. I'm not that evil.
+            if (rateOfSpawn < 2.0f)
             {
-                rateOfSpawn = 2;
+                rateOfSpawn = 2.0f;
             }
+
             Vector3 offset = Random.onUnitSphere;
             offset.z = 0;
             offset = offset.normalized * spawnDistance;
-            Instantiate(SlimeLargePrefab, transform.position + offset, Quaternion.identity);
+            Instantiate(SlimeLargePrefab, transform.position + offset, Quaternion.identity); //Spawn Large Slime in a random distance away.
         }
     }
 
     void SpawnPlayer()
     {
         numLives--;
-        respawnTimer = 1;
+        respawnTimer = 1.0f;
         playerInstance = (GameObject)Instantiate(wizardPrefab, transform.position, Quaternion.identity);
     }
 

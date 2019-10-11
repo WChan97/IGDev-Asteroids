@@ -7,14 +7,15 @@ public class MagicMissile : MonoBehaviour
 {
     Scene currentScene;
     public GameObject magicMissilePrefab;
+    public AudioClip cast;
     float cooldownTimer = 0.0f;
     float castDelay = 0.3f;
-    public AudioClip cast;
     float hasteCooldown = 3.0f;
+
     // Start is called before the first frame update
     void Start()
     {
-        currentScene = SceneManager.GetActiveScene();
+        currentScene = SceneManager.GetActiveScene(); //Used for Special and Normal differences
     }
 
     // Update is called once per frame
@@ -23,7 +24,7 @@ public class MagicMissile : MonoBehaviour
         cooldownTimer -= Time.deltaTime;
         if (Input.GetButton("Fire1") && cooldownTimer <= 0)
         {
-            //If Player holds M1, fire.
+            //If Player holds M1, fire and wait until next fire.
             AudioSource.PlayClipAtPoint(cast, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -10.0f));
             //Debug.Log("Magic Missile!");
             cooldownTimer = castDelay;
@@ -45,7 +46,8 @@ public class MagicMissile : MonoBehaviour
 
         if (currentScene.name == "SpecialScene")
         {
-            if (Input.GetKeyDown("e") == true && hasteCooldown <= 0.0f)
+            //Special Scene's Iteration. This script handles the fire rate, so the "Haste" action will benefit the firing speed.
+            if (Input.GetKeyDown("e") == true || Input.GetKeyDown("left shift") && hasteCooldown <= 0.0f)
             {
                 castDelay = 0.1f;
                 hasteCooldown = 3.0f;

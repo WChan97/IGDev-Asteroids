@@ -9,6 +9,7 @@ MonoImporter:
   - SlimeLargePrefab: {fileID: 4178183897823720585, guid: d2043375b1e098c4f8fc13906751a941,
       type: 3}
   - hit: {fileID: 8300000, guid: 3f5e58dddbd902140b5ebb80a3ead7d8, type: 3}
+  - splat: {fileID: 8300000, guid: b89fc7161c9ccf54b9e51550765f8fda, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

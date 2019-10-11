@@ -14,7 +14,8 @@ public class DestroyMissile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
+        //If the object exists for 5 seconds (unusual if the missile will be on screen for longer) delete it.
+        timer = timer - Time.deltaTime;
         if (timer <= 0)
         {
             Destroy(gameObject);
