@@ -205,6 +205,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tele: {fileID: 8300000, guid: 05e211083ed2a1c42998413e8bdd8429, type: 3}
+  haste: {fileID: 8300000, guid: a15c25d18a69374438ecf4c8dc359570, type: 3}
 --- !u!70 &5467743210916660352
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

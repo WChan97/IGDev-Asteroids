@@ -38,5 +38,6 @@ public class LevelHandler : MonoBehaviour
     public void quitGame()
     {
         EditorApplication.isPlaying = false;
+        //Application.Quit();
     }
 }

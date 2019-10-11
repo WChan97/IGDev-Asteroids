@@ -383,7 +383,7 @@ GameObject:
   m_Component:
   - component: {fileID: 748579669}
   - component: {fileID: 748579670}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SlimeSmall_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -438,8 +438,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1631325967
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1a1e1078e868cde4e97e41ffbdd9aa58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -462,7 +462,7 @@ GameObject:
   m_Component:
   - component: {fileID: 760465660}
   - component: {fileID: 760465661}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SlimeLarge_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -517,8 +517,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1631325967
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300006, guid: ff1c5a0be642c234baa3706b4f2a5c04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -644,7 +644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 220, y: -180}
+  m_AnchoredPosition: {x: 220, y: -135}
   m_SizeDelta: {x: 267, y: 216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &843511614
@@ -695,7 +695,9 @@ MonoBehaviour:
 
     Triple Magic Missile - Mouse2
 
-    Teleport - Q (Unlimited)'
+    Teleport - Q (Unlimited)
+
+    Haste - E (On Cooldown)'
 --- !u!222 &843511615
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -734,7 +736,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1610565180}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -795,7 +797,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1022741138}
   - component: {fileID: 1022741139}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SlimeLarge_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,8 +852,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1631325967
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: ff1c5a0be642c234baa3706b4f2a5c04, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -874,7 +876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1168063436}
   - component: {fileID: 1168063437}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SlimeSmall_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -929,8 +931,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1631325967
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 1a1e1078e868cde4e97e41ffbdd9aa58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -1021,7 +1023,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1775859590}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1199,7 +1202,6 @@ RectTransform:
   - {fileID: 1576096937}
   - {fileID: 843511613}
   - {fileID: 2102425096}
-  - {fileID: 1775859590}
   - {fileID: 869625611}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1285,7 +1287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1775859590}
   - component: {fileID: 1775859591}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Wizard_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1300,15 +1302,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1775859589}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -432.5, y: -264.7, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 0}
+  m_LocalPosition: {x: -5.2099915, y: 2.380005, z: 10}
+  m_LocalScale: {x: 3.1636012, y: 3.1636012, z: 3.1636012}
   m_Children:
   - {fileID: 1022741138}
   - {fileID: 760465660}
   - {fileID: 748579669}
   - {fileID: 1168063436}
-  m_Father: {fileID: 1610565180}
-  m_RootOrder: 5
+  m_Father: {fileID: 1403069675}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1775859591
 SpriteRenderer:
@@ -1344,8 +1346,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1631325967
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 63752b4ba48afd344bf2fe904778c13b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

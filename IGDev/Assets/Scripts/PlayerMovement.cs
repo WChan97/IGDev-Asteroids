@@ -8,8 +8,11 @@ public class PlayerMovement : MonoBehaviour
     Scene currentScene;
     private SpriteRenderer sprite;
     float speed = 4.0f;
+    float hasteCooldown = 3.0f;
     float wizardBoundary = 0.3f;
     public AudioClip tele;
+    public AudioClip haste;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,16 @@ public class PlayerMovement : MonoBehaviour
                 pos = new Vector3(mousePos.x, mousePos.y, 0);
             }
 
+            if (Input.GetKeyDown("e") == true && hasteCooldown <= 0.0f)
+            {
+                AudioSource.PlayClipAtPoint(haste, Camera.main.transform.position);
+                speed = 9.0f;
+                hasteCooldown = 3.0f;
+            }
+            hasteCooldown -= Time.deltaTime;
+            if (hasteCooldown <= 1.5f) {
+                speed = 4.0f;
+            }
         }
 
         transform.position = pos;
@@ -82,6 +95,15 @@ public class PlayerMovement : MonoBehaviour
         if ((mousePos.x - transform.position.x) > 0.0f)
         {
             sprite.flipX = false;
+        }
+    }
+
+    void OnGUI()
+    {
+        if (hasteCooldown <= 0.0f && currentScene.name == "SpecialScene")
+        {
+            GUI.Label(new Rect(10, 60, 100, 50), "Haste Ready");
+            GUI.Label(new Rect(10, 70, 100, 50), "Press 'E'");
         }
     }
 }
