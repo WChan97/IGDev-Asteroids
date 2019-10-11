@@ -2784,7 +2784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 340, y: 257}
+  m_AnchoredPosition: {x: 335, y: 245}
   m_SizeDelta: {x: 90, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &425514675
@@ -9721,11 +9721,6 @@ PrefabInstance:
       propertyPath: m_Colors.m_NormalColor.a
       value: 0.6784314
       objectReference: {fileID: 0}
-    - target: {fileID: 3365297101710640243, guid: d0177179983fc3e48a8a5ca32771372f,
-        type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3365297101710640245, guid: d0177179983fc3e48a8a5ca32771372f,
         type: 3}
       propertyPath: m_Text
@@ -9747,6 +9742,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365297101710640243, guid: d0177179983fc3e48a8a5ca32771372f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0177179983fc3e48a8a5ca32771372f, type: 3}
@@ -12909,7 +12909,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cc08f64ef91904748a5653119efe9973, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

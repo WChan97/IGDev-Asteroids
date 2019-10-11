@@ -13,6 +13,7 @@ public class SlimeMovement : MonoBehaviour
     float bounceDelay;
     float flingDelay;
     float wizardBoundary = -2f;
+    public GameObject flingPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -118,6 +119,7 @@ public class SlimeMovement : MonoBehaviour
             { //All Slimes
                 speed = 0.0f;
                 flingDelay = 1.0f;
+                Instantiate(flingPrefab, new Vector3(transform.position.x, transform.position.y, 0), Quaternion.Euler(0, 0, 0));
             }
             else if (speed == 0.0f)
             {//All fling ready slimes

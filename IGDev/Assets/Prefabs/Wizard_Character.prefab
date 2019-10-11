@@ -107,7 +107,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicMissilePrefab: {fileID: 8556441552284859582, guid: c9c49cbf5eb017e41ae23ce7a58e3d96,
     type: 3}
-  castDelay: 0.5
   cast: {fileID: 8300000, guid: e378f2deb0d6bc94c989e579df53e9b9, type: 3}
 --- !u!1 &5467743210916660356
 GameObject:
@@ -139,7 +138,7 @@ Transform:
   m_GameObject: {fileID: 5467743210916660356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.25, y: 1.25, z: 1}
   m_Children:
   - {fileID: 5467743210514698337}
   m_Father: {fileID: 0}
@@ -205,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec86d8eed6e43bd4496a6055ec8c3e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tele: {fileID: 8300000, guid: 05e211083ed2a1c42998413e8bdd8429, type: 3}
 --- !u!70 &5467743210916660352
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

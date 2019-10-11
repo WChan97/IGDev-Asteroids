@@ -171,3 +171,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  flingPrefab: {fileID: 5866763763440780884, guid: f8db2acc84b41ac4eb72930abe47f48f,
+    type: 3}

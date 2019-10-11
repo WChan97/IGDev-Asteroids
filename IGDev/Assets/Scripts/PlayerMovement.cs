@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer sprite;
     float speed = 4.0f;
     float wizardBoundary = 0.3f;
+    public AudioClip tele;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,6 +57,7 @@ public class PlayerMovement : MonoBehaviour
         {
             if (Input.GetKeyDown("q") == true)
             {
+                AudioSource.PlayClipAtPoint(tele, Camera.main.transform.position);
                 Vector3 mousePos = Input.mousePosition;
                 mousePos = Camera.main.ScreenToWorldPoint(mousePos);
                 pos = new Vector3(mousePos.x, mousePos.y, 0);
